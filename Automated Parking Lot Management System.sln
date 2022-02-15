@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automated Parking Lot Management System", "Automated Parking Lot Management System\Automated Parking Lot Management System.csproj", "{661F45DC-D05F-4377-931C-B300A60C0541}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Parking System", "Parking System\Parking System.vdproj", "{5E25FE7C-10BD-419F-BBC3-36759BB8110C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{661F45DC-D05F-4377-931C-B300A60C0541}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{661F45DC-D05F-4377-931C-B300A60C0541}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{661F45DC-D05F-4377-931C-B300A60C0541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E25FE7C-10BD-419F-BBC3-36759BB8110C}.Debug|Any CPU.ActiveCfg = Debug
+		{5E25FE7C-10BD-419F-BBC3-36759BB8110C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

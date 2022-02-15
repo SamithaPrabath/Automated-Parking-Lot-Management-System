@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTo = new System.Windows.Forms.DateTimePicker();
+            this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.table = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker2
+            // dateTo
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(320, 148);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(282, 22);
-            this.dateTimePicker2.TabIndex = 36;
+            this.dateTo.Location = new System.Drawing.Point(320, 148);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Size = new System.Drawing.Size(282, 22);
+            this.dateTo.TabIndex = 36;
             // 
-            // dateTimePicker1
+            // dateFrom
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 148);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(229, 22);
-            this.dateTimePicker1.TabIndex = 35;
+            this.dateFrom.Location = new System.Drawing.Point(12, 148);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Size = new System.Drawing.Size(229, 22);
+            this.dateFrom.TabIndex = 35;
             // 
             // label3
             // 
@@ -119,14 +120,25 @@
             this.table.TabIndex = 50;
             this.table.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(629, 139);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 39);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Find";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 813);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.table);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTo);
+            this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -145,12 +157,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTo;
+        private System.Windows.Forms.DateTimePicker dateFrom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView table;
+        private System.Windows.Forms.Button button1;
     }
 }

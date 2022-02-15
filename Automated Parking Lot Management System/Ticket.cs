@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing;
 using System.Data.SqlClient;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Automated_Parking_Lot_Management_System
 {
@@ -18,7 +21,7 @@ namespace Automated_Parking_Lot_Management_System
         {
             InitializeComponent();
         }
-
+        public static string url;
         private void Ticket_Load(object sender, EventArgs e)
         {
             string barcodeNo="";
@@ -89,11 +92,30 @@ namespace Automated_Parking_Lot_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Printing..........");
+            
+            Document doc = new Document();
+            PdfWriter.GetInstance(doc,new FileStream("E:/createpdf.pdf",FileMode.Create));
+            doc.Open();
+            Paragraph p = new Paragraph("<center><h1>Automated Parking Lot Management System</h1></center>");
+            doc.Add(p);
+            p = new Paragraph(lblDate.Text);
+            doc.Add(p);
+            p = new Paragraph(lblTime.Text);
+            doc.Add(p);
+            p = new Paragraph(lblSlotNo.Text);
+            doc.Add(p);
+            doc.Close();
+
+
+
+            url = @"file:///E:/createpdf.pdf";
+            //PrintTicket printTicket = new PrintTicket();
+            //this.Close();
+            //printTicket.Show();
             TicketGenration tg = new TicketGenration();
             this.Close();
             tg.Visible = true;
-           
+
         }
     }
 }

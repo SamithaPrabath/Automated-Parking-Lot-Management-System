@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,6 +95,12 @@
     <Compile Include="GenerateBill.Designer.cs">
       <DependentUpon>GenerateBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintTicket.Designer.cs">
+      <DependentUpon>PrintTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenerateBill.resx">
       <DependentUpon>GenerateBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintTicket.resx">
+      <DependentUpon>PrintTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
